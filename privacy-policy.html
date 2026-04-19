@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f1416" />
+  <title>Gym Trainer App | Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #0f1416;
+      --bg-soft: #13191b;
+      --surface: rgba(255, 255, 255, 0.03);
+      --surface-strong: #151c1e;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(164, 210, 51, 0.22);
+      --text: #f3f6f7;
+      --muted: #b2bcc0;
+      --muted-2: #8f9a9e;
+      --accent: #a4d233;
+      --accent-soft: rgba(164, 210, 51, 0.12);
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.36);
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(164, 210, 51, 0.12), transparent 28%),
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.05), transparent 18%),
+        linear-gradient(180deg, #0b1011 0%, var(--bg) 100%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .noise {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      opacity: 0.05;
+      mix-blend-mode: soft-light;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .page {
+      position: relative;
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 20px 56px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)),
+        linear-gradient(145deg, #111719 0%, #0f1516 100%);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      margin-bottom: 18px;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(2px);
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 280px;
+      height: 280px;
+      right: -120px;
+      top: -120px;
+      background: radial-gradient(circle, rgba(164,210,51,0.22), transparent 62%);
+    }
+
+    .hero::after {
+      width: 180px;
+      height: 180px;
+      left: -60px;
+      bottom: -70px;
+      background: radial-gradient(circle, rgba(255,255,255,0.07), transparent 65%);
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 26px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-mark {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: #0b1213;
+      border: 1px solid rgba(164, 210, 51, 0.18);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.02), 0 14px 40px rgba(0, 0, 0, 0.28);
+      overflow: hidden;
+    }
+
+    .brand-mark img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .brand-copy {
+      display: grid;
+      gap: 2px;
+    }
+
+    .brand-name {
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted-2);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.74rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 18px rgba(164, 210, 51, 0.6);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.85fr;
+      gap: 22px;
+      align-items: end;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4.7rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      margin-bottom: 16px;
+      max-width: 11ch;
+    }
+
+    .lead {
+      font-size: 1.02rem;
+      color: var(--muted);
+      max-width: 68ch;
+    }
+
+    .hero-stats {
+      display: grid;
+      gap: 12px;
+    }
+
+    .stat {
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+      padding: 16px;
+    }
+
+    .stat-label {
+      font-size: 0.76rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+
+    .stat-value {
+      font-size: 0.98rem;
+      color: var(--text);
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .pill {
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(164, 210, 51, 0.18);
+      color: #dce6b1;
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .toc,
+    .card {
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.02));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .toc {
+      padding: 18px;
+      margin-bottom: 18px;
+    }
+
+    .toc h2,
+    .card h2 {
+      font-size: 1.08rem;
+      margin-bottom: 12px;
+    }
+
+    .toc p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+    }
+
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .toc a {
+      text-decoration: none;
+      color: var(--text);
+      padding: 13px 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+    }
+
+    .toc a:hover {
+      transform: translateY(-1px);
+      border-color: rgba(164, 210, 51, 0.3);
+      background: rgba(164, 210, 51, 0.07);
+    }
+
+    .summary {
+      margin-bottom: 18px;
+      padding: 20px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .summary-item,
+    .section,
+    .footer-card,
+    .callout {
+      padding: 20px;
+      border-radius: var(--radius-lg);
+      background: rgba(17, 23, 25, 0.78);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .summary-item h3,
+    .callout h2,
+    .footer-card h2 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .summary-item p,
+    .section p,
+    .callout p,
+    .footer-card p,
+    li {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .summary-item {
+      background: rgba(255,255,255,0.025);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .sections {
+      display: grid;
+      gap: 14px;
+    }
+
+    .section {
+      scroll-margin-top: 20px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .section-number {
+      color: var(--accent);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .section h2 {
+      font-size: clamp(1.3rem, 2vw, 1.65rem);
+      letter-spacing: -0.02em;
+    }
+
+    .section p + p {
+      margin-top: 10px;
+    }
+
+    .list {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .list li {
+      display: grid;
+      grid-template-columns: 12px 1fr;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .list li::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      margin-top: 8px;
+      box-shadow: 0 0 14px rgba(164, 210, 51, 0.6);
+    }
+
+    .callout {
+      margin-top: 18px;
+      border-color: rgba(164, 210, 51, 0.2);
+      background:
+        linear-gradient(180deg, rgba(164, 210, 51, 0.06), rgba(255,255,255,0.02)),
+        rgba(17, 23, 25, 0.86);
+    }
+
+    .callout-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .mini-card {
+      border-radius: 18px;
+      padding: 14px;
+      border: 1px solid rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .mini-card strong {
+      display: block;
+      color: var(--accent);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 6px;
+    }
+
+    .footer-card {
+      margin-top: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+    }
+
+    .footer-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .footer-meta span {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .fine-print {
+      color: var(--muted-2);
+      font-size: 0.86rem;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid,
+      .summary-grid,
+      .callout-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .toc-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-top {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero {
+        padding: 22px;
+      }
+
+      .page {
+        padding-inline: 14px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        color: #000;
+      }
+
+      .noise,
+      .hero::before,
+      .hero::after {
+        display: none;
+      }
+
+      .hero,
+      .toc,
+      .summary,
+      .section,
+      .callout,
+      .footer-card {
+        box-shadow: none;
+        background: #fff;
+        border-color: #ddd;
+      }
+
+      .pill,
+      .meta-row,
+      .footer-meta {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <main class="page">
+    <section class="hero" aria-labelledby="policy-title">
+      <div class="hero-top">
+        <div class="brand" aria-label="Gym Trainer App brand">
+          <div class="brand-mark">
+            <img src="assets/images/logo.png" alt="Gym Trainer App logo" />
+          </div>
+          <div class="brand-copy">
+            <div class="brand-name">Gym Trainer App</div>
+            <div class="brand-subtitle">Professional coaching platform privacy policy</div>
+          </div>
+        </div>
+        <div class="pill">Standalone HTML document</div>
+      </div>
+
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Legal Information</div>
+          <h1 id="policy-title">Privacy Policy</h1>
+          <p class="lead">
+            This page explains how Gym Trainer App collects, uses, stores, and shares information when you use the platform as a client, coach, or administrator. It is written to read like a real app policy, not a placeholder.
+          </p>
+          <div class="meta-row" aria-label="Policy metadata">
+            <span class="pill">Effective April 19, 2026</span>
+            <span class="pill">Updated for the current release</span>
+            <span class="pill">Designed for fitness coaching workflows</span>
+          </div>
+        </div>
+
+        <div class="hero-stats" aria-label="Quick policy summary">
+          <div class="stat">
+            <div class="stat-label">What we collect</div>
+            <div class="stat-value">Account data, workouts, progress entries, media, device signals, and diagnostic logs.</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">How we use it</div>
+            <div class="stat-value">To run the service, authenticate users, manage workouts, deliver notifications, and secure accounts.</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">What we do not do</div>
+            <div class="stat-value">We do not sell personal data and we do not use it for unrelated advertising.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="toc card" aria-labelledby="toc-title">
+      <h2 id="toc-title">Contents</h2>
+      <p>Use these links to jump to the section you want to review.</p>
+      <div class="toc-grid">
+        <a href="#collection">1. Information we collect</a>
+        <a href="#usage">2. How we use information</a>
+        <a href="#legal-basis">3. Legal bases and consent</a>
+        <a href="#sharing">4. How information is shared</a>
+        <a href="#security">5. Storage and security</a>
+        <a href="#retention">6. Retention and deletion</a>
+        <a href="#rights">7. Your rights and choices</a>
+        <a href="#children">8. Children’s privacy</a>
+        <a href="#third-parties">9. Third-party services</a>
+        <a href="#changes">10. Changes to this policy</a>
+      </div>
+    </section>
+
+    <section class="summary card" aria-labelledby="summary-title">
+      <h2 id="summary-title">At a glance</h2>
+      <p>
+        Gym Trainer App is built to help trainers and clients manage workouts, progress, feedback, media, and communication. Because that requires account data and some technical information, the policy below explains exactly what is collected and why.
+      </p>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <h3>Data you enter</h3>
+          <p>Profile details, workout plans, progress notes, uploads, and messages you choose to store in the app.</p>
+        </div>
+        <div class="summary-item">
+          <h3>Data we generate</h3>
+          <p>Session, device, diagnostic, and notification data used for secure operation and troubleshooting.</p>
+        </div>
+        <div class="summary-item">
+          <h3>Data handling promise</h3>
+          <p>We keep information only as long as needed for service delivery, legal compliance, and security.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sections" aria-label="Privacy policy sections">
+      <article class="section" id="collection">
+        <div class="section-number">Section 01</div>
+        <h2>Information we collect</h2>
+        <p>
+          We collect information you provide directly when you create an account, use training features, upload media, or communicate with the Gym Trainer App team. This can include your name, email address, role selection, password, workout plans, progress updates, feedback, notes, and any content you choose to send through the app.
+        </p>
+        <p>
+          We may also collect technical and usage information automatically when you use the app. That can include device type, operating system, app version, approximate IP address, crash logs, push notification tokens, and diagnostic data that helps us keep the service stable.
+        </p>
+        <ul class="list">
+          <li><span>Account details such as your name, email address, password, and user role.</span></li>
+          <li><span>Fitness and coaching content that you enter, upload, or store in the app.</span></li>
+          <li><span>Device, session, and performance data used for security, debugging, and product improvement.</span></li>
+        </ul>
+      </article>
+
+      <article class="section" id="usage">
+        <div class="section-number">Section 02</div>
+        <h2>How we use information</h2>
+        <p>
+          We use your information to create and manage your account, authenticate sign-in attempts, deliver workouts and client data, enable media uploads, send notifications, and support the core coaching features of Gym Trainer App.
+        </p>
+        <p>
+          We also use information to improve the app, detect bugs or abuse, protect accounts from unauthorized access, respond to support requests, and comply with legal obligations. If you contact support, we may retain the conversation so we can resolve your issue and avoid repeating work later.
+        </p>
+        <ul class="list">
+          <li><span>Provide the app’s workout, client, media, and progress-tracking features.</span></li>
+          <li><span>Authenticate users, verify accounts, and protect the platform from misuse.</span></li>
+          <li><span>Monitor performance and fix technical issues without exposing unnecessary personal data.</span></li>
+        </ul>
+      </article>
+
+      <article class="section" id="legal-basis">
+        <div class="section-number">Section 03</div>
+        <h2>Legal bases and consent</h2>
+        <p>
+          Where applicable law requires a legal basis, we rely on performance of a contract when we provide the service you requested, legitimate interests when we secure and improve the platform, consent when we ask for permission for specific features, and legal obligation when we need to keep records or respond to lawful requests.
+        </p>
+        <p>
+          If you give us consent for optional features, you can withdraw that consent at any time through your device settings, account settings, or by contacting support. Withdrawing consent will not affect processing that already happened before you changed your preference.
+        </p>
+      </article>
+
+      <article class="section" id="sharing">
+        <div class="section-number">Section 04</div>
+        <h2>How information is shared</h2>
+        <p>
+          We do not sell your personal information. We only share data when necessary to run the service, protect users, or comply with the law.
+        </p>
+        <p>
+          Depending on how you use the app, information may be shared with service providers that help us host the app, store data, send push notifications, process authentication, or manage file uploads. We may also share information if we are required to do so by law, to enforce our terms, to investigate fraud or security incidents, or to protect the rights and safety of users and the public.
+        </p>
+        <ul class="list">
+          <li><span>With trusted infrastructure or support providers that operate parts of the service on our behalf.</span></li>
+          <li><span>With coaches or clients only when the app’s collaboration features are used and the sharing is part of the product design.</span></li>
+          <li><span>With legal, regulatory, or law enforcement authorities when required by applicable law.</span></li>
+        </ul>
+      </article>
+
+      <article class="section" id="security">
+        <div class="section-number">Section 05</div>
+        <h2>Storage and security</h2>
+        <p>
+          We use administrative, technical, and physical safeguards designed to protect your information from unauthorized access, loss, misuse, or alteration. These safeguards include access controls, limited internal access, and secure transmission practices where supported by the platform.
+        </p>
+        <p>
+          No system is perfectly secure. If a security issue ever affects your data, we will investigate the incident, take steps to contain it, and notify affected users when required by law.
+        </p>
+      </article>
+
+      <article class="section" id="retention">
+        <div class="section-number">Section 06</div>
+        <h2>Retention and deletion</h2>
+        <p>
+          We keep your information for as long as needed to provide Gym Trainer App, maintain account history, comply with legal obligations, resolve disputes, and enforce our agreements. When information is no longer needed, we delete it or anonymize it within a reasonable timeframe.
+        </p>
+        <p>
+          If you request deletion of your account or content, we will take reasonable steps to remove or de-identify the data from active systems unless retention is required by law, fraud prevention, security, or legitimate business recordkeeping.
+        </p>
+      </article>
+
+      <article class="section" id="rights">
+        <div class="section-number">Section 07</div>
+        <h2>Your rights and choices</h2>
+        <p>
+          Depending on where you live, you may have rights to access, correct, delete, restrict, or object to certain processing of your personal information. You may also have the right to receive a copy of your data or request that we transfer it to another service when technically feasible.
+        </p>
+        <p>
+          You can also manage some information directly through the app, update your profile, control notifications on your device, or remove content you no longer want stored. If a setting is not available in the app, you can contact support for help.
+        </p>
+        <ul class="list">
+          <li><span>Review and update your profile information where the app allows it.</span></li>
+          <li><span>Control push notification preferences through your device settings.</span></li>
+          <li><span>Ask for access, correction, or deletion through the official support channel.</span></li>
+        </ul>
+      </article>
+
+      <article class="section" id="children">
+        <div class="section-number">Section 08</div>
+        <h2>Children’s privacy</h2>
+        <p>
+          The app is not intended for children under the age required by local law to provide consent for online services, and we do not knowingly collect personal information from children who are not permitted to use the service. If we learn that a child provided information without appropriate consent, we will take steps to delete it as required.
+        </p>
+      </article>
+
+      <article class="section" id="third-parties">
+        <div class="section-number">Section 09</div>
+        <h2>Third-party services</h2>
+        <p>
+          The app may contain integrations or links to services we do not control. Those third parties have their own privacy practices, and we recommend reviewing their policies before enabling the integration or sharing information with them. Examples may include authentication tools, cloud storage providers, notification services, analytics tools, or media delivery infrastructure.
+        </p>
+      </article>
+
+      <article class="section" id="changes">
+        <div class="section-number">Section 10</div>
+        <h2>Changes to this policy</h2>
+        <p>
+          We may update this privacy policy from time to time to reflect changes in Gym Trainer App, legal requirements, or our data practices. When we make material changes, we will update the effective date on this page and, where appropriate, provide additional notice in the app or by email.
+        </p>
+      </article>
+    </section>
+
+    <section class="callout" aria-labelledby="plain-language-title">
+      <h2 id="plain-language-title">Plain-language summary</h2>
+      <p>
+        In simple terms, we collect the information required to run the coaching app, protect accounts, and make the experience work reliably. We only share it with service providers or other users when the product feature requires it, and we keep it only as long as needed.
+      </p>
+      <div class="callout-grid">
+        <div class="mini-card">
+          <strong>For clients</strong>
+          <span>Your workouts, progress, and media are used to track performance and collaborate with your coach.</span>
+        </div>
+        <div class="mini-card">
+          <strong>For coaches</strong>
+          <span>Client data is used to manage assignments, feedback, and training oversight inside the app.</span>
+        </div>
+        <div class="mini-card">
+          <strong>For everyone</strong>
+          <span>Technical data helps us secure accounts, fix bugs, and keep the service running smoothly.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-card" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact and updates</h2>
+      <p>
+        If you have a privacy question, want to exercise a data right, or need help understanding how your information is handled, contact the Gym Trainer App team through the in-app support flow or the official support details associated with your deployment of the app.
+      </p>
+      <p>
+        We recommend keeping this policy visible from your app’s login or settings area so users can review it before creating an account or connecting with a coach.
+      </p>
+      <div class="footer-meta">
+        <span>Standalone HTML</span>
+        <span>Embedded CSS</span>
+        <span>Responsive layout</span>
+        <span>Print-friendly</span>
+      </div>
+      <p class="fine-print">
+        If your company has a registered legal name, support email, or mailing address, add those details before publishing.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
